@@ -1,26 +1,11 @@
 ---
-title: Music Technology, Audio Technology and Sound Production template
+title: Creative Computing report template
 author: Harry Potter
-date: 27 September 2022
-toc: true
-tocdepth: 2
-colorlinks: true
-papersize: A4
-geometry:
-- width=150mm
-- top=25mm
-- bottom=25mm
-classoption: onecolumn
-documentclass: report
-fontsize: 12pt
-mainfont: 'Times New Roman'
-sansfont: Helvetica
-monofont: Inconsolata
-mathfont: MnSymbol
+date: September 2024
 lang: en-GB
-csl: wlv.csl
+csl: apa.csl
 bibliography: bib.bib
-abstract: In this paper we describe the formatting guidelines for written work on the BSc (Hons) and BA (Hons) Creative Computing courses at the University of Portsmouth. The template is a plain text document intended to be used with Pandoc. The resulting file should be a PDF unless the assessment requires an alternative file format.
+abstract: In this paper we describe the formatting guidelines for written work on the BSc (Hons) and BA (Hons) Creative Computing courses at the University of Portsmouth. The template is a plain text document intended to be used with Pandoc. The resulting file should be a PDF unless the assessment requires an alternative file format. `ClearSans` is a good font family option.
 ---
 
 # Introduction
@@ -57,11 +42,22 @@ $$v = \sqrt{\frac{\epsilon}{\rho}}$$
 
 
 ## Typesetting code
-If you are typesetting code add three or more tildes above and below the code, or surround the text with backticks, such as `var pitch = MouseX.kr(0,1,0)`.
+If you are typesetting code, surround the text with backticks, such as `var pitch = MouseX.kr(0,1,0)`. If you are typesetting a block of code, add three or more backticks above and below the code. You can add syntax highlighting by specifying the language after the first set of backticks. For example, here is some Javascript:
 
-~~~ {.c}
-code example = SinOsc.ar(440);
-~~~
+```js
+function draw() {
+  fill("red"); // with a comment
+  circle(200, 200, 20);
+  let x1 = 200;
+  let y1 = 200;
+  let x2 = mouseX;
+  let y2 = mouseY;
+  let d = dist(x1, y1, x2, y2);
+  let v = d / 400;
+  print(v);
+  sound.setVolume(v);
+}
+```
 
 
 ## Quotations
@@ -131,7 +127,7 @@ Figures can be added using the format shown below. The caption for the image is 
   
 ![An example of an image added directly from a URL [@Kinsler2000-hd, p.81]](https://archive.bleu255.com/makeart/2008/images/pure_data-workshop.png){width=50%}
 
-![An example of a local image in the same folder as the text file [@Howard2000-dr, p.29]](3d-domains.png)
+![An example of a local image in the same folder as the text file [@Howard2000-dr, p.29]](images/3d-domains.png)
 
 
 
