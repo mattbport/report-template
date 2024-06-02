@@ -5,8 +5,12 @@ date: September 2024
 lang: en-GB
 csl: apa.csl
 bibliography: bib.bib
-abstract: In this paper we describe the formatting guidelines for written work on the BSc (Hons) and BA (Hons) Creative Computing courses at the University of Portsmouth. The template is a plain text document intended to be used with Pandoc. The resulting file should be a PDF unless the assessment requires an alternative file format. `ClearSans` is a good font family option.
+abstract: In this paper we describe the formatting guidelines for written work on the BSc (Hons) and BA (Hons) Creative Computing courses at the University of Portsmouth. The template is a plain text document intended to be used with Pandoc. The resulting file should be a PDF unless the assessment requires an alternative file format.
 ---
+
+<!--
+`ClearSans` is a good font family option.
+-->
 
 # Introduction
 We ask you to make your submitted work look exactly like this document. The easiest way to do this is simply to make a copy of the style guide folder and replace the content with your own material.
@@ -80,7 +84,7 @@ Four | Five | Six
 
 
 # Referencing
-Use the Harvard referencing format. References should be published materials accessible to the public. Internal technical reports may be cited only if they are easily accessible (i.e. you can give the address to obtain the report within your citation) and may be obtained by any reader. Proprietary information may not be cited. Private communications should be acknowledged, not referenced (e.g., "[Robertson, personal communication]").
+Your references should be formatted following the APA 7th edition guidelines. References should be published materials accessible to the public. Internal technical reports may be cited only if they are easily accessible (i.e. you can give the address to obtain the report within your citation) and may be obtained by any reader. Proprietary information may not be cited. Private communications should be acknowledged, not referenced (e.g. [Robertson, personal communication]).
 
 
 ## Using Pandoc for citation management
@@ -96,9 +100,9 @@ More citation examples can be found at <http://pandoc.org/demo/example19/Extensi
 # Setting up and running Pandoc
 Your BibTeX file and the citation style language (CSL) files need to be on your computer, and Pandoc will need to be told where they are. We recommend keeping your BibTeX and CSL files in a single place and creating a simple script to run Pandoc; we will cover this in lectures.
 
-The CSL file for the University of Wolverhampton's Harvard style can be found in this collection of CSL files: <https://github.com/citation-style-language/styles>
+The CSL file for APA 7th can be found in this collection of CSL files: <https://github.com/citation-style-language/styles>
 
-Direct link: <https://github.com/citation-style-language/styles/blob/master/harvard-university-of-wolverhampton.csl>
+Direct link: <https://github.com/citation-style-language/styles/blob/master/apa.csl>
 
 
 
@@ -107,15 +111,15 @@ This process may seem slightly complicated when you first set it up, but it will
 
 This document was created by running the build script (`build.sh`). In order to run it on your computer you must first open a Terminal and `cd` to the folder containing the files. Run the following command to make the build script executable: this only needs to be done once.
 
-~~~ {.bash}
+```bash
 chmod +x build.sh
-~~~
+```
 
 From now on, every time you want to build a new copy of your work simply type the following:
 
-~~~ {.bash}
+```bash
 ./build.sh
-~~~
+```
 
 If you want to make other file types (Word document, HTML, ePub etc.) open and follow the instructions in the `build.sh` script. If you are writing a dissertation there is a minor change we recommend in the build file; open it up and follow the instructions.
 
@@ -123,11 +127,11 @@ If you want to make other file types (Word document, HTML, ePub etc.) open and f
 
 # Figures and captions
 
-Figures can be added using the format shown below. The caption for the image is in square brackets and the path to the image in parentheses. Images can be hosted online (as seen in Figure 1) or on your local computer (as in Figure 2). Refer to the images in the body text as the images will be automatically placed in the most appropriate location.
+Figures can be added using the format shown below. The caption for the image is in square brackets and the path to the image in parentheses. Images can be hosted online (as seen in @fig:pd) or on your local computer (as in @fig:3d). Refer to the images in the body text as the images will be automatically placed in the most appropriate location.
   
-![An example of an image added directly from a URL [@Kinsler2000-hd, p.81]](https://archive.bleu255.com/makeart/2008/images/pure_data-workshop.png){width=50%}
+![An example of an image added directly from a URL [@Kinsler2000-hd, p.81]](https://archive.bleu255.com/makeart/2008/images/pure_data-workshop.png){#fig:pd}
 
-![An example of a local image in the same folder as the text file [@Howard2000-dr, p.29]](images/3d-domains.png)
+![An example of a local image in the same folder as the text file [@Howard2000-dr, p.29]](images/3d-domains.png){#fig:3d}
 
 
 

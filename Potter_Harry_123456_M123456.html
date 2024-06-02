@@ -275,10 +275,12 @@ In this paper we describe the formatting guidelines for written work on
 the BSc (Hons) and BA (Hons) Creative Computing courses at the
 University of Portsmouth. The template is a plain text document intended
 to be used with Pandoc. The resulting file should be a PDF unless the
-assessment requires an alternative file format. <code>ClearSans</code>
-is a good font family option.
+assessment requires an alternative file format.
 </div>
 </header>
+<!--
+`ClearSans` is a good font family option.
+-->
 <h1 data-number="1" id="introduction"><span
 class="header-section-number">1</span> Introduction</h1>
 <p>We ask you to make your submitted work look exactly like this
@@ -377,13 +379,14 @@ class="header-section-number">2.7</span> Tables</h2>
 </table>
 <h1 data-number="3" id="referencing"><span
 class="header-section-number">3</span> Referencing</h1>
-<p>Use the Harvard referencing format. References should be published
-materials accessible to the public. Internal technical reports may be
-cited only if they are easily accessible (i.e. you can give the address
-to obtain the report within your citation) and may be obtained by any
-reader. Proprietary information may not be cited. Private communications
-should be acknowledged, not referenced (e.g., “[Robertson, personal
-communication]”).</p>
+<p>Your references should be formatted following the APA 7th edition
+guidelines. References should be published materials accessible to the
+public. Internal technical reports may be cited only if they are easily
+accessible (i.e. you can give the address to obtain the report within
+your citation) and may be obtained by any reader. Proprietary
+information may not be cited. Private communications should be
+acknowledged, not referenced (e.g. [Robertson, personal
+communication]).</p>
 <h2 data-number="3.1" id="using-pandoc-for-citation-management"><span
 class="header-section-number">3.1</span> Using Pandoc for citation
 management</h2>
@@ -409,13 +412,12 @@ be on your computer, and Pandoc will need to be told where they are. We
 recommend keeping your BibTeX and CSL files in a single place and
 creating a simple script to run Pandoc; we will cover this in
 lectures.</p>
-<p>The CSL file for the University of Wolverhampton’s Harvard style can
-be found in this collection of CSL files: <a
-href="https://github.com/citation-style-language/styles"
+<p>The CSL file for APA 7th can be found in this collection of CSL
+files: <a href="https://github.com/citation-style-language/styles"
 class="uri">https://github.com/citation-style-language/styles</a></p>
 <p>Direct link: <a
-href="https://github.com/citation-style-language/styles/blob/master/harvard-university-of-wolverhampton.csl"
-class="uri">https://github.com/citation-style-language/styles/blob/master/harvard-university-of-wolverhampton.csl</a></p>
+href="https://github.com/citation-style-language/styles/blob/master/apa.csl"
+class="uri">https://github.com/citation-style-language/styles/blob/master/apa.csl</a></p>
 <h2 data-number="4.1" id="building-your-document"><span
 class="header-section-number">4.1</span> Building your document</h2>
 <p>This process may seem slightly complicated when you first set it up,
@@ -440,20 +442,21 @@ the build file; open it up and follow the instructions.</p>
 class="header-section-number">5</span> Figures and captions</h1>
 <p>Figures can be added using the format shown below. The caption for
 the image is in square brackets and the path to the image in
-parentheses. Images can be hosted online (as seen in Figure 1) or on
-your local computer (as in Figure 2). Refer to the images in the body
-text as the images will be automatically placed in the most appropriate
-location.</p>
-<figure>
+parentheses. Images can be hosted online (as seen in <span
+class="citation" data-cites="fig:pd">(<strong>fig:pd?</strong>)</span>)
+or on your local computer (as in <span class="citation"
+data-cites="fig:3d">(<strong>fig:3d?</strong>)</span>). Refer to the
+images in the body text as the images will be automatically placed in
+the most appropriate location.</p>
+<figure id="fig:pd">
 <img
 src="https://archive.bleu255.com/makeart/2008/images/pure_data-workshop.png"
-style="width:50.0%"
 alt="An example of an image added directly from a URL (Kinsler et al., 2000, p. 81)" />
 <figcaption aria-hidden="true">An example of an image added directly
 from a URL <span class="citation" data-cites="Kinsler2000-hd">(Kinsler
 et al., 2000, p. 81)</span></figcaption>
 </figure>
-<figure>
+<figure id="fig:3d">
 <img src="images/3d-domains.png"
 alt="An example of a local image in the same folder as the text file (Howard &amp; Angus, 2000, p. 29)" />
 <figcaption aria-hidden="true">An example of a local image in the same

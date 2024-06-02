@@ -6,9 +6,12 @@ echo 'Making the PDF...'
 _file="Potter_Harry_123456_M123456"
 
 # Dissertations and other long documents should replace the 'article' option with 'report'.
-pandoc --citeproc \
+pandoc \
+--filter pandoc-crossref \
+--citeproc \
 --pdf-engine=xelatex \
---standalone -N \
+--standalone \
+-N \
 -V toc:true \
 -V tocdepth:2 \
 -V colorlinks:true \
